@@ -6,6 +6,7 @@ O Sistema permite visualizar os detalhes da task e efetuar sua exclusão.
 
 
 ## Layout
+![image](https://github.com/alessandraesteph/CriadorDeTask/assets/56772280/b269da68-5693-4769-91fc-3622e411c744)
 
 ## Ferramentas
 - Java
