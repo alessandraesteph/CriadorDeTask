@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <title>Task List</title>
+    <style>
+        body {
+            background-color: steelblue;
+        }
+
+        .container {
+            margin-top: 50px;
+        }
+
+        h1 {
+            color: whitesmoke;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 15px;
+            padding: 10px;
+            background-color: #ffffff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .delete-link {
+            margin-left: 10px;
+            color: #dc3545;
+        }
+
+        a {
+            text-decoration: none;
+            color: #525562;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        a.add-task-btn {
+            background-color: lightseagreen;
+            color: #ffffff;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1 class="text-center">Task List</h1>
+    <ul>
+        <li th:each="task : ${tasks}">
+            <div class="row">
+                <div class="col-8">
+                    <a th:href="@{/tasks/{id}(id=${task.id})}" th:text="${task.description}"></a>
+                </div>
+                <div class="col-4 text-right">
+                    <a th:href="@{/tasks/delete/{id}(id=${task.id})}" class="delete-link">Delete</a>
+                </div>
+            </div>
+        </li>
+    </ul>
+    <a th:href="@{/tasks/new}" class="btn btn-outline-info add-task-btn">Add New Task</a>
+</div>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <title>Task Details</title>
+    <style>
+        body {
+            background-color: #749682;
+        }
+
+        .container {
+            margin-top: 50px;
+        }
+
+        h1 {
+            color: whitesmoke;
+        }
+
+        p {
+            margin-top: 20px;
+            color: white;
+        }
+
+        a {
+            text-decoration: none;
+            color: #007bff;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        a.back-link {
+            color: #525562;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1 class="text-center">Task Details</h1>
+    <h6>Descrição</h6>
+    <p th:text="${task.description}"></p>
+    <a th:href="@{/tasks}" class="back-link">Back to Task List</a>
+</div>
+</body>
+</html>
