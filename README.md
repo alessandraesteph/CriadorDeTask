@@ -17,15 +17,4 @@ O Sistema permite visualizar os detalhes da task e efetuar sua exclusão.
   
 ## Como executar o Projeto
 Pré requisitos: Java 17
-```
-1º Clonar o repositório
-git clone https://github.com/Lucasleallopes/AdivinhaPalavra.git
-
-2º Executar o o projeto
-execute a classe JogoApplication.java
-
-3° Visualização pelo navegador
-http://localhost:8080/tasks
-
-```
 
